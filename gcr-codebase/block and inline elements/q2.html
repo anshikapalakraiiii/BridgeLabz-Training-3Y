@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Catalog</title>
+</head>
+<body>
+
+    <h1>Online Store - Product Catalog</h1>
+
+    <!-- Product table with an image, description, price and availability for each product -->
+    <table border="1" cellpadding="8">
+        <tr>
+            <th>Image</th>
+            <th>Product Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Availability</th>
+        </tr>
+
+        <tr>
+            <td><img src="wireless-mouse.jpg" alt="Wireless Mouse" width="100" height="100"></td>
+            <td>Wireless Mouse</td>
+            <td>Ergonomic wireless mouse with adjustable DPI settings.</td>
+            <td>₹799</td>
+            <td>In Stock</td>
+        </tr>
+
+        <tr>
+            <td><img src="mechanical-keyboard.jpg" alt="Mechanical Keyboard" width="100" height="100"></td>
+            <td>Mechanical Keyboard</td>
+            <td>RGB backlit mechanical keyboard with blue switches.</td>
+            <td>₹2,499</td>
+            <td>In Stock</td>
+        </tr>
+
+        <!-- Example of rowspan: one image and description shared across two colour variants -->
+        <tr>
+            <td rowspan="2"><img src="headphones.jpg" alt="Headphones" width="100" height="100"></td>
+            <td>Bluetooth Headphones (Black)</td>
+            <td rowspan="2">Over-ear Bluetooth headphones with 20-hour battery life.</td>
+            <td>₹1,999</td>
+            <td>In Stock</td>
+        </tr>
+        <tr>
+            <td>Bluetooth Headphones (White)</td>
+            <td>₹1,999</td>
+            <td>Out of Stock</td>
+        </tr>
+
+        <!-- Example of colspan: a full-width notice row -->
+        <tr>
+            <td colspan="5" style="text-align:center;">-- End of Electronics Category --</td>
+        </tr>
+    </table>
+
+</body>
+</html>
