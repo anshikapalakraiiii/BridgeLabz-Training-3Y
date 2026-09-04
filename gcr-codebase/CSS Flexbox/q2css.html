@@ -1,0 +1,74 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: #f2efe9;
+  color: #232323;
+}
+
+.page-header {
+  text-align: center;
+  padding: 3rem 1.5rem 2rem;
+}
+
+.page-header h1 {
+  font-size: 2rem;
+  letter-spacing: 0.02em;
+}
+
+.page-header p {
+  margin-top: 0.5rem;
+  color: #6a6a63;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 0 2rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e2ded3;
+  border-radius: 6px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 160px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.card .price {
+  color: #a35d3c;
+  font-weight: 600;
+}
+
+/* Tablet: 2 columns */
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: 1 column */
+@media (max-width: 500px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    padding: 0 1.25rem 2.5rem;
+  }
+}
