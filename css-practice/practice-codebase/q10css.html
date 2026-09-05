@@ -1,0 +1,141 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Georgia', serif;
+  color: #262521;
+  background: #fbfaf6;
+}
+
+/* Header: Flexbox */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 2.5rem;
+  border-bottom: 2px solid #262521;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.site-header nav {
+  display: flex;
+  gap: 1.8rem;
+  font-family: Arial, sans-serif;
+}
+
+.site-header nav a {
+  color: #262521;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.site-header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main: 2-column Grid */
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 2.5rem;
+}
+
+.article h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  animation: fade-up 0.8s ease both;
+}
+
+.article > p {
+  color: #524f47;
+  margin-bottom: 2rem;
+  max-width: 60ch;
+}
+
+/* Feature boxes inside article: Flexbox */
+.feature-boxes {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.box {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid #e6e2d6;
+  border-radius: 6px;
+  padding: 1.2rem;
+}
+
+.box h3 {
+  font-family: Arial, sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #8c8878;
+  margin-bottom: 0.5rem;
+}
+
+.box p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.sidebar h2 {
+  font-family: Arial, sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #8c8878;
+  margin-bottom: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  padding: 0.7rem 0;
+  border-top: 1px solid #e6e2d6;
+}
+
+.sidebar a {
+  color: #262521;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 2px solid #262521;
+  font-family: Arial, sans-serif;
+  font-size: 0.85rem;
+  color: #6b6858;
+}
+
+/* Keyframe animation */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile: collapse to single column */
+@media (max-width: 700px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .feature-boxes {
+    flex-direction: column;
+  }
+  .site-header {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
