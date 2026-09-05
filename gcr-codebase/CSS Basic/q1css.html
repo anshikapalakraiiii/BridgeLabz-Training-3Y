@@ -1,0 +1,95 @@
+/* ---------- Global reset & base ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  /* custom background/text combo that keeps good contrast */
+  background-color: #f4f6f8;
+  color: #1f2937;
+
+  /* Flexbox column layout so footer sticks to bottom of viewport */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* vh unit */
+}
+
+/* ---------- Fixed header ---------- */
+.site-header {
+  position: fixed;       /* stays at top when scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;           /* rem unit */
+  background-color: #1f2937;
+  color: #f9fafb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;          /* % unit */
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;               /* px unit */
+}
+
+.nav-links a {
+  color: #f9fafb;
+  text-decoration: none;
+  font-size: 1em;          /* em unit */
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #93c5fd;
+}
+
+/* ---------- Main content ---------- */
+main {
+  flex: 1;                 /* pushes footer down, grows to fill space */
+  margin-top: 4rem;        /* offset for fixed header */
+  padding: 60px 5%;
+}
+
+.bio-section {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 24px;
+  border: 4px solid #93c5fd;
+}
+
+.bio-text {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background-color: #1f2937;
+  color: #f9fafb;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
