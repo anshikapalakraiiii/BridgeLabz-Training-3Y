@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dropdown-based Selection Page</title>
+</head>
+<body>
+
+    <h1>Travel Preference Selector</h1>
+
+    <form>
+
+        <!-- Country dropdown with pre-selected option -->
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="usa">USA</option>
+            <option value="india" selected>India</option>
+            <option value="australia">Australia</option>
+        </select>
+        <br><br>
+
+        <!-- State dropdown with pre-selected option -->
+        <label for="state">State:</label>
+        <select id="state" name="state">
+            <option value="delhi">Delhi</option>
+            <option value="maharashtra" selected>Maharashtra</option>
+            <option value="kerala">Kerala</option>
+        </select>
+        <br><br>
+
+        <!-- City dropdown with pre-selected option -->
+        <label for="city">City:</label>
+        <select id="city" name="city">
+            <option value="mumbai" selected>Mumbai</option>
+            <option value="pune">Pune</option>
+            <option value="nagpur">Nagpur</option>
+        </select>
+        <br><br>
+
+        <!-- Favorite Tourist Place dropdown with pre-selected option -->
+        <label for="place">Favorite Tourist Place:</label>
+        <select id="place" name="place">
+            <option value="gateway">Gateway of India</option>
+            <option value="marine-drive" selected>Marine Drive</option>
+            <option value="elephanta">Elephanta Caves</option>
+        </select>
+
+    </form>
+
+    <!-- Summary paragraph -->
+    <p>Based on the selections above, you are from Maharashtra, India, currently residing in
+       Mumbai, and your favorite tourist place is Marine Drive.</p>
+
+</body>
+</html>
