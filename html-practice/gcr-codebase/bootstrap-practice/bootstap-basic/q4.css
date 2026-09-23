@@ -1,0 +1,8 @@
+.menu-header {
+  background: linear-gradient(135deg, #7a1f1f, #b3552d);
+}
+
+.figure img {
+  max-height: 350px;
+  object-fit: cover;
+}
