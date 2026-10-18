@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #fdfdfd;
+  color: #222;
+  line-height: 1.5;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.2rem;
+  background: #34495e;
+  color: #fff;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.block {
+  margin-bottom: 2rem;
+  padding: 1rem 1.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.block h2 {
+  margin-top: 0;
+  color: #34495e;
+}
+
+/* ===== 1. Element selector: applies to every <p> ===== */
+p {
+  color: #444;
+}
+
+/* ===== 2. Class selector ===== */
+.highlight {
+  background: #fff3cd;
+  padding: 0.4rem;
+  border-left: 4px solid #f5c518;
+}
+
+/* ===== 3. ID selector: unique, one element only ===== */
+#special-note {
+  color: #fff;
+  background: #e74c3c;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+/* ===== 4. Attribute selector ===== */
+a[data-type="external"] {
+  color: #8e44ad;
+  font-weight: bold;
+}
+
+/* ===== 5. Combinators ===== */
+.combo-group {
+  margin-bottom: 1.2rem;
+  padding: 0.75rem;
+  background: #f7f9fb;
+  border-radius: 6px;
+}
+
+/* Child combinator: only direct <p> children of .box */
+.box > p {
+  color: #27ae60;
+  font-weight: bold;
+}
+
+/* Adjacent sibling: only the <ul> immediately after an <h3> */
+h3 + ul li:first-child {
+  color: #2980b9;
+  font-weight: bold;
+}
+
+/* General sibling: every .note that follows an <h3>, not just the first */
+h3 ~ p.note {
+  color: #d35400;
+}
+
+/* Descendant combinator: any <li> nested anywhere inside .wrapper */
+.wrapper li {
+  color: #c0392b;
+}

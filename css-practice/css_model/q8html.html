@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Box Model Exploration</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>The CSS Box Model</h1>
+    <p>Content, padding, border, and margin — visualized as layers.</p>
+  </header>
+
+  <main class="stage">
+    <div class="layer layer--margin">
+      <span class="layer-label">margin</span>
+      <div class="layer layer--border">
+        <span class="layer-label">border</span>
+        <div class="layer layer--padding">
+          <span class="layer-label">padding</span>
+          <div class="layer layer--content">content</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section class="explainer">
+    <div class="explainer-item">
+      <h2>Content</h2>
+      <p>The actual text or elements inside the box — sized by width and height.</p>
+    </div>
+    <div class="explainer-item">
+      <h2>Padding</h2>
+      <p>Space between the content and the border, inside the box.</p>
+    </div>
+    <div class="explainer-item">
+      <h2>Border</h2>
+      <p>A visible (or invisible) line that wraps the padding and content.</p>
+    </div>
+    <div class="explainer-item">
+      <h2>Margin</h2>
+      <p>Space outside the border, separating this box from its neighbors.</p>
+    </div>
+  </section>
+
+  <section class="sizing-compare">
+    <h2>Default vs. border-box sizing</h2>
+    <div class="compare-row">
+      <div class="compare-box compare-box--default">
+        <span>content-box (default)<br />width: 200px + padding + border adds on top</span>
+      </div>
+      <div class="compare-box compare-box--border-box">
+        <span>box-sizing: border-box<br />width: 200px total, padding &amp; border included</span>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

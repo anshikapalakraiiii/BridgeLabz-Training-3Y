@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #0f172a;
+  color: #f1f5f9;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.2rem;
+  background: #020617;
+}
+
+/* ===== Flexbox distributes cards evenly across the page ===== */
+.effects-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 3.5rem 1.5rem;
+}
+
+.fx-card {
+  padding: 1.4rem 1.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  background: #1e293b;
+  color: #f1f5f9;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Card 1: grows and glows */
+.fx-card:nth-child(1):hover {
+  transform: scale(1.12);
+  background: #7c3aed;
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.7);
+}
+
+/* Card 2: lifts upward */
+.fx-card:nth-child(2):hover {
+  transform: translateY(-12px);
+  background: #0ea5e9;
+  box-shadow: 0 12px 20px rgba(14, 165, 233, 0.5);
+}
+
+/* Card 3: rotates gently while scaling slightly */
+.fx-card:nth-child(3):hover {
+  transform: rotate(-4deg) scale(1.05);
+  background: #f59e0b;
+  box-shadow: 0 8px 18px rgba(245, 158, 11, 0.5);
+}
+
+/* Card 4: slides color and scales */
+.fx-card:nth-child(4):hover {
+  transform: scale(1.08);
+  background: #22c55e;
+  box-shadow: 0 8px 18px rgba(34, 197, 94, 0.5);
+}
+
+.fx-card:active {
+  transform: scale(0.96);
+}

@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-header, .site-footer {
+  text-align: center;
+  padding: 1.2rem;
+  background: #111827;
+  color: #fff;
+}
+
+/* ===== Page wrap centers the main card, fills remaining height ===== */
+.page-wrap {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e5e7eb;
+  padding: 2rem 1rem;
+}
+
+/* ===== Main content card ===== */
+.main-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid #ddd;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 380px;
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid #6366f1;
+  object-fit: cover;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: 100%;
+}
+
+.profile-form label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #374151;
+  margin-top: 0.6rem;
+}
+
+.profile-form input {
+  padding: 0.6rem 0.8rem;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.profile-form input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+.form-buttons {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.btn {
+  flex: 1;
+  padding: 0.65rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.btn.primary {
+  background: #6366f1;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: #4f46e5;
+}
+
+.btn.secondary {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.btn.secondary:hover {
+  background: #e5e7eb;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.4);
+}

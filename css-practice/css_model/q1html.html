@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Borders &amp; Padding Demonstration</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Borders &amp; Padding Demonstration</h1>
+    <p>A visual reference for common border styles, radius values, and internal spacing.</p>
+  </header>
+
+  <main>
+    <section class="box-row" aria-label="Border style examples">
+      <div class="box box--solid">
+        <h2>Solid</h2>
+        <p>border-style: solid;</p>
+      </div>
+      <div class="box box--dashed">
+        <h2>Dashed</h2>
+        <p>border-style: dashed;</p>
+      </div>
+      <div class="box box--double">
+        <h2>Double</h2>
+        <p>border-style: double;</p>
+      </div>
+      <div class="box box--groove">
+        <h2>Groove</h2>
+        <p>border-style: groove;</p>
+      </div>
+    </section>
+
+    <section class="box-row" aria-label="Rounded corner examples">
+      <div class="box box--radius-sm">
+        <h2>Slight radius</h2>
+        <p>border-radius: 6px;</p>
+      </div>
+      <div class="box box--radius-md">
+        <h2>Medium radius</h2>
+        <p>border-radius: 16px;</p>
+      </div>
+      <div class="box box--radius-pill">
+        <h2>Pill</h2>
+        <p>border-radius: 999px;</p>
+      </div>
+      <div class="box box--radius-mixed">
+        <h2>Mixed corners</h2>
+        <p>Different radius per corner</p>
+      </div>
+    </section>
+
+    <section class="box-row" aria-label="Padding examples">
+      <div class="box box--pad-sm">
+        <h2>padding: 6px</h2>
+      </div>
+      <div class="box box--pad-md">
+        <h2>padding: 20px</h2>
+      </div>
+      <div class="box box--pad-lg">
+        <h2>padding: 40px</h2>
+      </div>
+      <div class="box box--pad-uneven">
+        <h2>padding: 10px 40px</h2>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p>Hover over any box above to see the border color transition.</p>
+  </footer>
+</body>
+</html>

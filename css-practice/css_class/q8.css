@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #fafafa;
+  color: #222;
+  text-align: center;
+}
+
+header, footer {
+  padding: 1.2rem;
+  background: #0f766e;
+  color: #fff;
+}
+
+/* ===== Flexbox centers both boxes side by side ===== */
+.compare-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 3rem 1.5rem;
+}
+
+/* Shared dimensions so the difference is visible */
+.box {
+  width: 250px;
+  padding: 20px;
+  border: 5px solid;
+  border-radius: 8px;
+  text-align: left;
+}
+
+/* ===== Default box-sizing: content-box ===== */
+.content-box {
+  box-sizing: content-box;
+  background: #fee2e2;
+  border-color: #dc2626;
+}
+
+/* ===== border-box includes padding & border in the width ===== */
+.border-box {
+  box-sizing: border-box;
+  background: #dcfce7;
+  border-color: #16a34a;
+}
+
+.box h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+/* ===== Responsive: stack on small screens ===== */
+@media (max-width: 600px) {
+  .compare-area {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box {
+    width: 90%;
+    max-width: 300px;
+  }
+}

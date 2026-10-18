@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Outline &amp; Focus Styling Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="form-wrap">
+    <form class="contact-form">
+      <h1>Send a Message</h1>
+      <p class="form-hint">Tab through the fields to see each outline and focus style.</p>
+
+      <label for="name">Name</label>
+      <input id="name" type="text" class="field field--solid-outline" placeholder="Jane Doe" />
+
+      <label for="email">Email</label>
+      <input id="email" type="email" class="field field--dashed-outline" placeholder="jane@example.com" />
+
+      <label for="subject">Subject</label>
+      <input id="subject" type="text" class="field field--offset-outline" placeholder="Project inquiry" />
+
+      <label for="message">Message</label>
+      <textarea id="message" class="field field--double-outline" rows="4" placeholder="Write your message here..."></textarea>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </main>
+</body>
+</html>

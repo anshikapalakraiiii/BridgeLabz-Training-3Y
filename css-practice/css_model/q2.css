@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #eef1f0;
+  color: #24312d;
+}
+
+.page-header {
+  text-align: center;
+  padding: 32px 24px 16px;
+}
+
+.page-header h1 {
+  margin: 0 0 8px;
+  color: #1c3a34;
+}
+
+.page-header p {
+  margin: 0;
+  color: #55645f;
+}
+
+/* ===== Stage: centers all boxes vertically and horizontally ===== */
+.stage {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;       /* vertical centering */
+  justify-content: center;   /* horizontal centering */
+  gap: 28px;
+  padding: 24px;
+}
+
+.box {
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+}
+
+.box h2 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+}
+
+.box p {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+/* ===== Fixed px-based box ===== */
+.box--px {
+  width: 180px;
+  height: 180px;
+  background-color: #3d7a68;
+}
+
+/* ===== Percentage-based box with a minimum height floor ===== */
+.box--percent {
+  width: 40%;
+  height: 220px;
+  min-height: 150px;   /* box will not shrink below this even if height is recalculated */
+  background-color: #d98a3d;
+}
+
+/* ===== vh height combined with an em-based max-width and scroll overflow ===== */
+.box--vh-em {
+  height: 30vh;         /* height relative to viewport */
+  max-width: 12em;      /* width capped relative to font size */
+  width: 100%;
+  overflow: auto;        /* scrolls internally once content exceeds the box */
+  background-color: #35597c;
+}
+
+.page-footer {
+  text-align: center;
+  padding: 20px;
+  color: #5c6b66;
+  font-size: 0.9rem;
+}

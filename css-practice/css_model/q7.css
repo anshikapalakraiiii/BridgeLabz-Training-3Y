@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #fdfcf9;
+  color: #262421;
+}
+
+.page-header {
+  text-align: center;
+  padding: 48px 24px 16px;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.page-header h1 {
+  margin: 0 0 8px;
+  font-size: 2.2rem;
+}
+
+.subtitle {
+  margin: 0;
+  color: #7a756a;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+main {
+  max-width: 680px;   /* keeps line length under ~80 characters for readability */
+  margin: 0 auto;
+  padding: 16px 24px 60px;
+}
+
+article {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.05rem;
+}
+
+.lede {
+  font-size: 1.2rem;
+  color: #3a362e;
+}
+
+h2 {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  margin-top: 40px;
+  color: #4a4436;
+}
+
+/* ===== Font family demonstrations ===== */
+.font-serif {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.font-sans {
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.font-mono {
+  font-family: "Courier New", Courier, monospace;
+  background: #f0efe8;
+  padding: 10px 14px;
+  border-radius: 6px;
+}
+
+/* ===== Line-height and letter-spacing comparisons ===== */
+.sized-text--tight {
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+}
+
+.sized-text--loose {
+  line-height: 1.9;
+  letter-spacing: 0.3px;
+}
+
+/* ===== Inline emphasis elements ===== */
+mark {
+  background-color: #ffe08a;
+  color: #262421;
+  padding: 0 2px;
+}
+
+strong {
+  color: #a8431f;
+}
+
+em {
+  color: #35597c;
+  font-style: italic;
+}
+
+/* ===== First-letter / first-line pseudo-elements ===== */
+.drop-cap::first-line {
+  font-variant: small-caps;
+  letter-spacing: 0.5px;
+}
+
+.drop-cap::first-letter {
+  font-size: 3.2rem;
+  float: left;
+  line-height: 0.85;
+  padding-right: 8px;
+  color: #a8431f;
+  font-family: Georgia, serif;
+}

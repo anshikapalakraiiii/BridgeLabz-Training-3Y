@@ -1,0 +1,125 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Georgia', serif;
+  color: #2a2a2a;
+  background: #fbfaf7;
+}
+
+.blog-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  gap: 1.5rem;
+  min-height: 100vh;
+  padding: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.blog-header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 2px solid #26261f;
+  padding-bottom: 1rem;
+}
+
+.blog-header h1 {
+  font-size: 1.8rem;
+}
+
+.blog-header nav {
+  display: flex;
+  gap: 1.5rem;
+  font-family: Arial, sans-serif;
+}
+
+.blog-header nav a {
+  color: #26261f;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.blog-header nav a:hover {
+  text-decoration: underline;
+}
+
+.blog-sidebar {
+  grid-area: sidebar;
+}
+
+.blog-sidebar h2 {
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #7a7a70;
+  margin-bottom: 0.8rem;
+}
+
+.blog-sidebar ul {
+  list-style: none;
+}
+
+.blog-sidebar li {
+  padding: 0.5rem 0;
+  border-top: 1px solid #e6e3da;
+}
+
+.blog-sidebar a {
+  color: #26261f;
+  text-decoration: none;
+}
+
+.blog-main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.post {
+  background: #ffffff;
+  border: 1px solid #e6e3da;
+  border-radius: 4px;
+  padding: 1.5rem;
+}
+
+.post h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.post p {
+  line-height: 1.6;
+  color: #47473f;
+}
+
+.blog-footer {
+  grid-area: footer;
+  font-family: Arial, sans-serif;
+  font-size: 0.85rem;
+  color: #7a7a70;
+  border-top: 1px solid #e6e3da;
+  padding-top: 1rem;
+}
+
+@media (max-width: 800px) {
+  .blog-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "sidebar"
+      "footer";
+  }
+  .blog-main {
+    grid-template-columns: 1fr;
+  }
+}

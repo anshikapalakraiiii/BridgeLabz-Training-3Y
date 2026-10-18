@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Pseudo-Classes Demo</title>
+<link rel="stylesheet" href="q1_pseudo_classes.css">
+</head>
+<body>
+  <header>
+    <h1>CSS Pseudo-Classes in Action</h1>
+    <p>Hover, focus, click, and scroll to see each state come alive.</p>
+  </header>
+
+  <main>
+    <section class="demo-row">
+
+      <article class="card">
+        <h2>:hover</h2>
+        <a href="#" class="demo-link">Hover this link</a>
+        <p>Changes color when the mouse moves over it.</p>
+      </article>
+
+      <article class="card">
+        <h2>:focus</h2>
+        <input type="text" class="demo-input" placeholder="Click to focus">
+        <p>Highlights with a colored outline when focused via click or Tab.</p>
+      </article>
+
+      <article class="card">
+        <h2>:active</h2>
+        <button class="demo-btn">Press me</button>
+        <p>Changes appearance while the mouse button is held down.</p>
+      </article>
+
+      <article class="card">
+        <h2>:nth-child()</h2>
+        <ul class="demo-list">
+          <li>Item one</li>
+          <li>Item two</li>
+          <li>Item three</li>
+          <li>Item four</li>
+          <li>Item five</li>
+        </ul>
+        <p>Every alternate item is styled using :nth-child(even).</p>
+      </article>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>Assignment 8 &mdash; Question 1</p>
+  </footer>
+</body>
+</html>

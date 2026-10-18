@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS Selectors Practice</title>
+<link rel="stylesheet" href="q4_selectors.css">
+</head>
+<body>
+  <header>
+    <h1>CSS Selectors Practice Page</h1>
+  </header>
+
+  <main>
+
+    <section class="block">
+      <h2>Element Selector</h2>
+      <p>This paragraph is styled purely by the <code>p</code> element selector.</p>
+      <p>So is this second paragraph &mdash; both share the same base style.</p>
+    </section>
+
+    <section class="block">
+      <h2>Class Selector</h2>
+      <p class="highlight">This paragraph uses the <code>.highlight</code> class.</p>
+      <p>This one does not use the class, so it looks different.</p>
+    </section>
+
+    <section class="block">
+      <h2>ID Selector</h2>
+      <p id="special-note">This paragraph is targeted uniquely with <code>#special-note</code>.</p>
+    </section>
+
+    <section class="block">
+      <h2>Attribute Selector</h2>
+      <a href="#" data-type="external">Link with data-type="external"</a><br>
+      <a href="#">Regular link without the attribute</a>
+    </section>
+
+    <section class="block combinators">
+      <h2>Combinators</h2>
+
+      <div class="combo-group">
+        <p>Child combinator <code>div &gt; p</code>:</p>
+        <div class="box">
+          <p>Direct child paragraph (styled)</p>
+          <span><p>Nested deeper paragraph (not styled by this rule)</p></span>
+        </div>
+      </div>
+
+      <div class="combo-group">
+        <p>Adjacent sibling <code>h3 + ul</code>:</p>
+        <h3>A heading</h3>
+        <ul>
+          <li>First item right after heading (styled)</li>
+          <li>Second item</li>
+        </ul>
+      </div>
+
+      <div class="combo-group">
+        <p>General sibling <code>h3 ~ p.note</code>:</p>
+        <h3>Another heading</h3>
+        <p class="note">First note after heading (styled)</p>
+        <p class="note">Second note after heading (also styled)</p>
+      </div>
+
+      <div class="combo-group">
+        <p>Descendant combinator <code>.wrapper li</code>:</p>
+        <div class="wrapper">
+          <ul>
+            <li>List item inside wrapper (styled)</li>
+            <li>Another item inside wrapper (styled)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Assignment 8 &mdash; Question 4</p>
+  </footer>
+</body>
+</html>

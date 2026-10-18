@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #fbfaf7;
+  color: #302f2c;
+  line-height: 1.6;
+}
+
+.page-header {
+  text-align: center;
+  padding: 32px 24px 12px;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px 60px;
+}
+
+.demo {
+  margin-bottom: 44px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #e4e1d8;
+}
+
+.demo h2 {
+  margin-bottom: 6px;
+}
+
+code {
+  background: #efece2;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* =========================================================
+   ATTRIBUTE SELECTORS
+   ========================================================= */
+
+/* Selects any input whose type attribute equals "text" */
+input[type="text"] {
+  border: 2px solid #7a9e7e;
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+
+/* Selects any anchor whose href begins with "https" (external/secure links) */
+a[href^="https"] {
+  color: #1b6e3c;
+  font-weight: 600;
+}
+
+a[href^="https"]::after {
+  content: " ↗"; /* small indicator appended only to matching links */
+}
+
+.attr-demo {
+  display: flex;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+/* =========================================================
+   PSEUDO-CLASSES
+   ========================================================= */
+
+.pseudo-list {
+  list-style: none;
+  padding: 0;
+  max-width: 320px;
+}
+
+.pseudo-list li {
+  padding: 10px 12px;
+  margin-bottom: 6px;
+  background: #f0efe9;
+  border-radius: 6px;
+  transition: background 0.25s ease;
+}
+
+/* :hover - highlights a list item under the cursor */
+.pseudo-list li:hover {
+  background: #d9e6da;
+}
+
+/* :nth-child(odd) - alternating stripe styling */
+.pseudo-list li:nth-child(odd) {
+  border-left: 4px solid #c9622b;
+}
+
+/* :focus - highlights the input while it has keyboard focus */
+.focus-demo {
+  padding: 8px 10px;
+  border: 2px solid #b7b3a6;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.25s ease;
+}
+
+.focus-demo:focus {
+  border-color: #35597c;
+}
+
+/* =========================================================
+   PSEUDO-ELEMENTS
+   ========================================================= */
+
+/* ::before / ::after - wrap the quote text in decorative quotation marks */
+.quote-demo {
+  font-style: italic;
+  color: #55524a;
+}
+
+.quote-demo::before {
+  content: "\201C"; /* opening curly quote */
+}
+
+.quote-demo::after {
+  content: "\201D"; /* closing curly quote */
+}
+
+/* =========================================================
+   COMBINATORS
+   ========================================================= */
+
+.combo-box {
+  border: 1px dashed #c9c4b5;
+  padding: 14px;
+  border-radius: 8px;
+  margin-bottom: 14px;
+}
+
+/* Descendant combinator (space) - matches a <p> at any depth inside .combo-box */
+.combo-box p {
+  color: #3c6b52;
+}
+
+/* Child combinator (>) - matches only a <p> that is a direct child of this box */
+.combo-box--child > p {
+  font-weight: 700;
+  color: #a84b2a;
+}
+
+/* Adjacent sibling combinator (+) - matches a <p> immediately following an <h3> */
+.combo-box--sibling h3 + p {
+  color: #1b5fa8;
+  font-weight: 700;
+}
+
+/* General sibling combinator (~) - matches any <p> that comes after the <h3>,
+   not only the one directly after it */
+.combo-box--sibling h3 ~ p {
+  text-decoration: underline;
+}

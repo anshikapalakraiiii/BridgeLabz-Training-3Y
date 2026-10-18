@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f0f0f0;
+  color: #222;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #1b1b2f;
+  color: #fff;
+}
+
+/* ===== Grid layout: 3 columns, wraps to 1 column below 700px ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  margin: 0;
+  text-align: center;
+}
+
+.img-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.img-wrap img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Semi-transparent dark overlay, invisible until hover */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.gallery-item:hover .overlay {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+figcaption {
+  margin-top: 0.6rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* ===== Responsive: stack to one column below 700px ===== */
+@media (max-width: 700px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}

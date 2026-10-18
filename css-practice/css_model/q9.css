@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #eef0f5;
+  color: #2b2d3a;
+}
+
+.form-wrap {
+  padding: 24px;
+  width: 100%;
+}
+
+.contact-form {
+  max-width: 420px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;                 /* uniform spacing between label/field pairs */
+}
+
+.contact-form h1 {
+  margin: 0 0 4px;
+  font-size: 1.4rem;
+}
+
+.form-hint {
+  margin: 0 0 16px;
+  color: #767a8a;
+  font-size: 0.85rem;
+}
+
+label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+/* ===== Shared field styling ===== */
+.field {
+  font: inherit;
+  padding: 10px 12px;
+  border: 1px solid #cfd3e0;
+  border-radius: 8px;
+  background-color: #fafbfe;
+  outline-offset: 4px;      /* default gap between border and outline */
+}
+
+/* ===== Distinct outline style per field, visible on focus ===== */
+
+/* Solid outline, standard offset */
+.field--solid-outline:focus {
+  outline: 3px solid #4361ee;
+  outline-offset: 4px;
+}
+
+/* Dashed outline with a larger offset */
+.field--dashed-outline:focus {
+  outline: 3px dashed #d98a3d;
+  outline-offset: 6px;
+}
+
+/* Outline pulled tight with a negative offset, sitting inside the border */
+.field--offset-outline:focus {
+  outline: 3px solid #3d7a68;
+  outline-offset: -2px;
+}
+
+/* Double outline effect achieved by pairing outline with box-shadow */
+.field--double-outline:focus {
+  outline: 2px solid #a8431f;
+  outline-offset: 5px;
+  box-shadow: 0 0 0 2px rgba(168, 67, 31, 0.25);
+}
+
+textarea.field {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.submit-btn {
+  margin-top: 20px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2b2d3a;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.submit-btn:hover {
+  background-color: #4361ee;
+}
+
+.submit-btn:focus {
+  outline: 3px solid #4361ee;
+  outline-offset: 3px;
+}

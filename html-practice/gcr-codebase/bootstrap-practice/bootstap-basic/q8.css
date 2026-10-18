@@ -1,0 +1,7 @@
+.plan-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-8px);
+}

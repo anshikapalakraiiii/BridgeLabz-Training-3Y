@@ -1,0 +1,97 @@
+/* ===== Base reset & typography ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f6f5f2;
+  color: #2b2b2b;
+  line-height: 1.5;
+}
+
+.page-header {
+  padding: 40px 24px 24px;
+  text-align: center;
+  border-bottom: 1px solid #ddd6c9;
+}
+
+.page-header h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+  color: #3c3c3c;
+}
+
+.page-header p {
+  margin: 0;
+  color: #6b6b6b;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+/* ===== Flexbox row that holds each set of boxes ===== */
+.box-row {
+  display: flex;
+  flex-wrap: wrap;             /* allows boxes to drop to a new line on small screens */
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+/* ===== Shared box appearance ===== */
+.box {
+  flex: 1 1 200px;
+  max-width: 240px;
+  background-color: #fffdf8;
+  border: 3px solid #a9a297;
+  text-align: center;
+  transition: border-color 0.35s ease;   /* smooth hover transition on border color */
+}
+
+.box h2 {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+}
+
+.box p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #7a7a7a;
+}
+
+.box:hover {
+  border-color: #c9622b;       /* border color change on hover */
+}
+
+/* ===== Border style variations ===== */
+.box--solid   { border-style: solid;   padding: 20px; }
+.box--dashed  { border-style: dashed;  padding: 20px; }
+.box--double  { border-style: double;  border-width: 6px; padding: 20px; }
+.box--groove  { border-style: groove;  border-width: 6px; padding: 20px; }
+
+/* ===== Border-radius variations ===== */
+.box--radius-sm     { border-radius: 6px;   padding: 20px; }
+.box--radius-md     { border-radius: 16px;  padding: 20px; }
+.box--radius-pill   { border-radius: 999px; padding: 20px 12px; }
+.box--radius-mixed  {
+  border-radius: 30px 4px 30px 4px;  /* different value on each corner */
+  padding: 20px;
+}
+
+/* ===== Padding variations ===== */
+.box--pad-sm     { padding: 6px; }
+.box--pad-md     { padding: 20px; }
+.box--pad-lg     { padding: 40px; }
+.box--pad-uneven { padding: 10px 40px; }   /* vertical 10px, horizontal 40px */
+
+.page-footer {
+  text-align: center;
+  padding: 24px;
+  color: #8a8a8a;
+  font-size: 0.9rem;
+}

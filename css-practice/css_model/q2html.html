@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Height &amp; Width Practice Layout</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Height &amp; Width Practice</h1>
+    <p>Comparing px, %, vh and em units, plus min/max constraints and overflow.</p>
+  </header>
+
+  <main class="stage">
+    <div class="box box--px">
+      <h2>px units</h2>
+      <p>width: 180px;<br />height: 180px;</p>
+    </div>
+
+    <div class="box box--percent">
+      <h2>% units</h2>
+      <p>width: 40%;<br />height: 220px;<br />min-height: 150px;</p>
+    </div>
+
+    <div class="box box--vh-em">
+      <h2>vh / em units</h2>
+      <p>height: 30vh;<br />max-width: 12em;<br />overflow: auto;
+        This box also contains extra text to demonstrate scrolling once the
+        content grows taller than the fixed viewport-height box that
+        contains it.</p>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <p>All three boxes are centered together using Flexbox alignment.</p>
+  </footer>
+</body>
+</html>

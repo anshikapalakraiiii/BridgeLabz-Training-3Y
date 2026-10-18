@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced CSS Selectors</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>Advanced CSS Selectors</h1>
+    <p>Attribute selectors, pseudo-classes, pseudo-elements and combinators.</p>
+  </header>
+
+  <main>
+    <section class="demo">
+      <h2>Attribute Selectors</h2>
+      <p>Targets a text input via <code>[type="text"]</code> and an external
+        link via <code>[href^="https"]</code>.</p>
+      <form class="attr-demo">
+        <input type="text" placeholder="Styled via [type='text']" />
+        <input type="password" placeholder="Not targeted (password type)" />
+      </form>
+      <p>
+        <a href="https://example.com">External link (starts with https)</a><br />
+        <a href="/local-page">Local link (not targeted)</a>
+      </p>
+    </section>
+
+    <section class="demo">
+      <h2>Pseudo-classes &amp; Pseudo-elements</h2>
+      <p>Hover, focus, nth-child, and ::before / ::after in action.</p>
+      <ul class="pseudo-list">
+        <li>Item one</li>
+        <li>Item two (hover me)</li>
+        <li>Item three</li>
+        <li>Item four</li>
+        <li>Item five</li>
+      </ul>
+      <label for="demo-input">Focus this field:</label>
+      <input id="demo-input" type="text" class="focus-demo" />
+      <p class="quote-demo">A quote styled with ::before and ::after content.</p>
+    </section>
+
+    <section class="demo">
+      <h2>Combinators</h2>
+      <p>Descendant, child (&gt;), adjacent sibling (+), and general sibling (~).</p>
+      <div class="combo-box">
+        <p>Descendant paragraph (any depth)</p>
+        <div>
+          <p>Nested descendant paragraph</p>
+        </div>
+      </div>
+      <div class="combo-box combo-box--child">
+        <p>Direct child paragraph</p>
+        <div><p>Grandchild paragraph (not targeted by &gt;)</p></div>
+      </div>
+      <div class="combo-box combo-box--sibling">
+        <h3>Heading</h3>
+        <p>Adjacent sibling paragraph (immediately after heading)</p>
+        <p>General sibling paragraph (later, still targeted by ~)</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

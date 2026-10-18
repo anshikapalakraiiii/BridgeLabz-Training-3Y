@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typography &amp; Text Styling</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="page-header">
+    <h1>The Quiet Craft of Typography</h1>
+    <p class="subtitle">Font families, weights, sizes, and spacing in practice.</p>
+  </header>
+
+  <main>
+    <article>
+      <p class="lede">
+        Good typography rarely calls attention to itself. It simply makes
+        reading easier, guiding the eye from word to word and line to line
+        without friction. This page walks through a few of the properties
+        that make that possible.
+      </p>
+
+      <h2>Weight and Family</h2>
+      <p class="font-serif">
+        This paragraph uses a <strong>serif typeface</strong>, often chosen
+        for long-form reading because its small strokes, called serifs, help
+        guide the eye along a line of text.
+      </p>
+      <p class="font-sans">
+        This paragraph switches to a <em>sans-serif typeface</em>, cleaner
+        and more geometric, commonly used for headings, interfaces, and
+        shorter passages of text.
+      </p>
+      <p class="font-mono">
+        This line uses a monospaced typeface, where every character takes up
+        the same width — useful for code and tabular data.
+      </p>
+
+      <h2>Size, Line Height and Letter Spacing</h2>
+      <p class="sized-text sized-text--tight">
+        Tight line-height and slightly condensed letter-spacing can feel
+        dense and efficient, but may hurt readability in long paragraphs if
+        overused.
+      </p>
+      <p class="sized-text sized-text--loose">
+        Looser line-height and a touch of extra letter-spacing gives text
+        room to breathe, which is often more comfortable for longer reading
+        passages like this one.
+      </p>
+
+      <h2>Highlighting Inline Text</h2>
+      <p>
+        Use <mark>mark</mark> to highlight a passage the reader should
+        notice, <strong>strong</strong> to indicate strong importance, and
+        <em>em</em> to add stress emphasis to a word or phrase.
+      </p>
+
+      <h2>First-letter and First-line</h2>
+      <p class="drop-cap">
+        The opening paragraph of an article can be treated typographically
+        with a drop cap and a styled first line, a technique borrowed
+        from printed books and newspapers, using the ::first-letter and
+        ::first-line pseudo-elements to style only the beginning of the
+        text without adding extra markup.
+      </p>
+    </article>
+  </main>
+</body>
+</html>

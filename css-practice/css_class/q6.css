@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #111827;
+  color: #f5f5f5;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.2rem;
+  background: #000;
+}
+
+/* ===== Flexbox centers all animation groups on the page ===== */
+.stage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  min-height: 65vh;
+  padding: 2rem;
+}
+
+.anim-group {
+  text-align: center;
+}
+
+/* ===== 1. Moving box: slides left-right and loops forever ===== */
+.moving-box {
+  width: 60px;
+  height: 60px;
+  background: #38bdf8;
+  border-radius: 8px;
+  margin: 0 auto 1rem;
+  animation: slide 2s ease-in-out infinite alternate;
+}
+
+@keyframes slide {
+  from { transform: translateX(-60px); }
+  to   { transform: translateX(60px); }
+}
+
+/* ===== 2. Bouncing ball: reused keyframe with delay and iteration count ===== */
+.ball-track {
+  width: 60px;
+  height: 120px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.bouncing-ball {
+  width: 40px;
+  height: 40px;
+  background: #f97316;
+  border-radius: 50%;
+  animation: bounce 1s ease-in-out infinite;
+  animation-delay: 0.3s;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-80px); }
+}
+
+/* ===== 3. Color-changing text: cycles through colors, limited iterations ===== */
+.color-text {
+  font-size: 1.4rem;
+  font-weight: bold;
+  animation: colorCycle 3s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+@keyframes colorCycle {
+  0%   { color: #f87171; }
+  33%  { color: #34d399; }
+  66%  { color: #60a5fa; }
+  100% { color: #facc15; }
+}

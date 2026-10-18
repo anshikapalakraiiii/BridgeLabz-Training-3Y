@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Box-Sizing Comparison</title>
+<link rel="stylesheet" href="q8_box_sizing.css">
+</head>
+<body>
+  <header>
+    <h1>Box-Sizing Comparison</h1>
+    <p>Both boxes share the same width and padding values.</p>
+  </header>
+
+  <main class="compare-area">
+
+    <div class="box content-box">
+      <h2>content-box (default)</h2>
+      <p>Width: 250px, Padding: 20px, Border: 5px</p>
+      <p>The padding and border are added <strong>on top of</strong> the 250px, so this box renders wider than 250px in total.</p>
+    </div>
+
+    <div class="box border-box">
+      <h2>border-box</h2>
+      <p>Width: 250px, Padding: 20px, Border: 5px</p>
+      <p>Padding and border are included <strong>within</strong> the 250px, so the box's final width stays exactly 250px.</p>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Assignment 8 &mdash; Question 8</p>
+  </footer>
+</body>
+</html>

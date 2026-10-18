@@ -1,0 +1,21 @@
+/* Custom styles layered on top of Bootstrap */
+
+.hero-section {
+  /* Gradient background for the hero banner */
+  background: linear-gradient(135deg, #2c3e91, #4a6fdc);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.navbar-brand {
+  letter-spacing: 1px;
+}
+
+/* Subtle hover lift on feature boxes */
+#features .border {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+#features .border:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}

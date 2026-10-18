@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog Posts | Pagination</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="bg-dark text-white text-center py-4">
+  <h1 class="fw-bold m-0">The Daily Read</h1>
+</header>
+
+<main class="container my-5">
+
+  <section class="mb-5">
+    <h4>Bootstrap 5 Tips for Beginners</h4>
+    <p>A quick roundup of small tricks that make working with the grid system faster.</p>
+    <hr>
+    <h4>Why Responsive Design Still Matters</h4>
+    <p>Mobile traffic keeps growing — here's how to make sure your site keeps up.</p>
+  </section>
+
+  <!-- Pagination component -->
+  <nav aria-label="Blog pagination">
+    <ul class="pagination justify-content-center">
+      <li class="page-item">
+        <a class="page-link" href="#">Previous</a>
+      </li>
+      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Simple pager -->
+  <div class="d-flex justify-content-between mt-4">
+    <a href="#" class="btn btn-outline-secondary">&laquo; Older Posts</a>
+    <a href="#" class="btn btn-outline-secondary">Newer Posts &raquo;</a>
+  </div>
+
+</main>
+
+<footer class="bg-dark text-white text-center py-3">
+  <p class="mb-0">&copy; 2026 The Daily Read</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

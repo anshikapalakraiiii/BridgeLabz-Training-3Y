@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #fafaf7;
+  color: #2c2c2c;
+}
+
+.page-header {
+  text-align: center;
+  padding: 36px 24px 12px;
+}
+
+.page-header p {
+  color: #6b6b6b;
+}
+
+/* ===== Centered stage for the nested box-model diagram ===== */
+.stage {
+  display: flex;
+  justify-content: center;   /* horizontal centering */
+  align-items: center;       /* vertical centering */
+  padding: 40px 24px;
+}
+
+.layer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.layer-label {
+  position: absolute;
+  top: 4px;
+  left: 8px;
+  font-size: 0.7rem;
+  text-transform: lowercase;
+  color: #555;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+/* Outermost: margin, shown with an outline instead of a background
+   so it reads as "space" rather than a filled layer */
+.layer--margin {
+  padding: 30px;
+  outline: 2px dashed #b0b0b0;
+}
+
+/* Border layer: a real, visible border */
+.layer--border {
+  border: 10px solid #d98a3d;
+  background-color: #f6e3c8;
+}
+
+/* Padding layer: distinct fill color to show the padding space */
+.layer--padding {
+  padding: 26px;
+  background-color: #cfe3d6;
+}
+
+/* Innermost: the actual content box */
+.layer--content {
+  background-color: #3d7a68;
+  color: #ffffff;
+  padding: 20px 30px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+/* ===== Written explanation of each layer ===== */
+.explainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 0 24px 50px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.explainer-item {
+  flex: 1 1 180px;
+  max-width: 220px;
+  text-align: center;
+}
+
+.explainer-item h2 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.explainer-item p {
+  font-size: 0.85rem;
+  color: #5a5a5a;
+  margin: 0;
+}
+
+/* ===== Default vs border-box comparison ===== */
+.sizing-compare {
+  padding: 20px 24px 60px;
+  text-align: center;
+}
+
+.compare-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.compare-box {
+  width: 200px;              /* declared width is the same for both boxes */
+  padding: 20px;
+  border: 8px solid #35597c;
+  background-color: #dfe9f2;
+  font-size: 0.8rem;
+  color: #21374a;
+}
+
+/* Default: padding and border are added ON TOP of the declared width,
+   so this box renders wider than 200px */
+.compare-box--default {
+  box-sizing: content-box;
+}
+
+/* border-box: padding and border are included WITHIN the declared width,
+   so this box renders at exactly 200px wide */
+.compare-box--border-box {
+  box-sizing: border-box;
+}

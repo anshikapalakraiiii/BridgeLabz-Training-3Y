@@ -1,0 +1,14 @@
+/* Hover effect for product cards, layered on Bootstrap's .shadow-sm */
+.product-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 200px;
+}
