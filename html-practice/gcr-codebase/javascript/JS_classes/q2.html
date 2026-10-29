@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Q2 – Student Registration</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <h1>Student Registration</h1>
+    <form id="student-form" novalidate>
+      <div class="field"><label for="name">Name</label><input id="name" type="text"><p class="error" id="name-error"></p></div>
+      <div class="field"><label for="email">Email</label><input id="email" type="text"><p class="error" id="email-error"></p></div>
+      <div class="field"><label for="phone">Phone</label><input id="phone" type="text"><p class="error" id="phone-error"></p></div>
+      <div class="field"><label for="password">Password</label><input id="password" type="password"><p class="error" id="password-error"></p></div>
+      <button type="submit">Register</button>
+      <p id="result" class="success"></p>
+    </form>
+  </main>
+  <script src="q2_student_form.js"></script>
+</body>
+</html>
