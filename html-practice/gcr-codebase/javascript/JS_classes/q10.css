@@ -1,0 +1,14 @@
+/* Shared styles for the browser-based questions (Q2, Q4, Q5, Q7, Q8) */
+body { font-family: system-ui, sans-serif; background: #f4f6f8; margin: 0; padding: 24px; }
+main { max-width: 440px; margin: 0 auto; background: #fff; padding: 24px; border-radius: 10px; box-shadow: 0 2px 8px #0002; }
+h1 { font-size: 1.3rem; margin-top: 0; }
+.field { margin-bottom: 14px; }
+label { display: block; font-weight: 600; margin-bottom: 4px; }
+input, select, textarea { width: 100%; padding: 8px; border: 2px solid #bbb; border-radius: 6px; box-sizing: border-box; font: inherit; }
+input[type="checkbox"] { width: auto; }
+input.valid { border-color: #1a9a3c; }
+input.invalid { border-color: #d62d20; }
+.error { color: #d62d20; font-size: .85rem; min-height: 1em; margin: 4px 0 0; }
+.success { color: #1a9a3c; font-weight: 600; }
+button { background: #2b5fd9; color: #fff; border: 0; padding: 10px 18px; border-radius: 6px; font: inherit; cursor: pointer; }
+pre, .ticket { background: #eef1f5; padding: 12px; border-radius: 6px; overflow-x: auto; }
