@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fake Store - Product Dashboard</title>
+  <style>
+    body { font-family: Georgia, serif; background: #f4f4f4; margin: 0; padding: 16px; }
+    h1 { text-align: center; font-size: 1.2rem; }
+    #product-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 14px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .product-card {
+      background: #fff; border-radius: 8px; padding: 12px;
+      text-align: center; box-shadow: 0 1px 4px rgba(0,0,0,.12);
+    }
+    .product-card img { height: 100px; max-width: 100%; object-fit: contain; }
+    .product-title { font-size: .8rem; font-weight: bold; margin: 8px 0 4px; }
+    .product-price { color: #087f5b; font-weight: bold; font-size: .85rem; }
+    #message { text-align: center; color: #c92a2a; }
+  </style>
+</head>
+<body>
+  <h1>🛍️ Fake Store – Product Dashboard</h1>
+  <p id="message"></p>
+  <div id="product-container"></div>
+
+  <script>
+    const API_URL = "https://fakestoreapi.com/products";
+    const container = document.getElementById("product-container");
+    const message = document.getElementById("message");
+
+    // Build one card with document.createElement and append it to the page
+    function createProductCard(product) {
+      const card = document.createElement("div");
+      card.className = "product-card";
+
+      const image = document.createElement("img");
+      image.src = product.image;
+      image.alt = product.title;
+
+      const title = document.createElement("div");
+      title.className = "product-title";
+      title.textContent = product.title;
+
+      const price = document.createElement("div");
+      price.className = "product-price";
+      price.textContent = `$${product.price}`;
+
+      card.append(image, title, price);
+      container.appendChild(card);
+    }
+
+    async function loadProducts() {
+      try {
+        const response = await fetch(API_URL);
+        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+        const products = await response.json();
+
+        products.forEach((product) => {
+          // Console output as required by the assignment
+          console.log(`Product: ${product.title}`);
+          console.log(`Price: $${product.price}`);
+          console.log(`Image: ${product.image}`);
+          createProductCard(product);
+        });
+      } catch (error) {
+        console.error(error);
+        message.textContent = "Failed to load products. Please try again.";
+      }
+    }
+
+    loadProducts();
+  </script>
+</body>
+</html>
