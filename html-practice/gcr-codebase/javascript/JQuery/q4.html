@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Q4 – Special Offer Banner</title>
+<style>
+:root{--bg:#f6f7fb;--ink:#1d2433;--accent:#2f5bea;--line:#d9deea}
+*{box-sizing:border-box}
+body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--ink);max-width:860px;margin:0 auto;padding:24px;line-height:1.5}
+h1{margin:0 0 4px}
+button{background:var(--accent);color:#fff;border:0;border-radius:6px;padding:8px 14px;cursor:pointer;font:inherit;margin:2px}
+button:hover{filter:brightness(1.12)}
+input,select{padding:8px;border:1px solid var(--line);border-radius:6px;font:inherit}
+.card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px;margin:10px 0}
+ul{list-style:none;padding:0}
+.banner{padding:18px;border-radius:8px;color:#fff;margin:8px 0;cursor:pointer;border:3px solid transparent}
+.banner.selected{border-color:#000}
+.b1{background:#e0245e}.b2{background:#1a9b53}.b3{background:#d97706}.b4{background:#2f5bea}.b5{background:#7c3aed}
+.rotator{position:relative;min-height:80px}
+.slide{display:none;padding:24px;border-radius:8px;color:#fff;text-align:center;font-size:1.2rem}
+.slide:first-child{display:block}
+</style>
+</head>
+<body>
+<header><h1>Special Offers</h1><p>Click banners to select them (none selected = all). Then use the buttons.</p></header>
+<main>
+  <section class="controls">
+    <button id="hideBtn">Hide</button><button id="showBtn">Show</button>
+    <button id="slideUpBtn">Slide Up</button><button id="slideDownBtn">Slide Down</button>
+    <button id="fadeOutBtn">Fade Out</button><button id="fadeInBtn">Fade In</button>
+  </section>
+  <section id="bannerList">
+    <div class="banner b1">Flat 50% off on Electronics</div>
+    <div class="banner b2">Free delivery above ₹499</div>
+    <div class="banner b3">Buy 1 Get 1 on Fashion</div>
+    <div class="banner b4">Extra 10% off with UPI</div>
+    <div class="banner b5">Members get early access</div>
+  </section>
+  <h2>Auto-Rotating Banner</h2>
+  <section class="rotator">
+    <div class="slide b1">Diwali Sale is live!</div>
+    <div class="slide b2">New arrivals every Friday</div>
+    <div class="slide b3">Clearance: up to 70% off</div>
+    <div class="slide b4">Refer a friend, earn ₹200</div>
+    <div class="slide b5">Free gift on first order</div>
+  </section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="q4.js"></script>
+</body>
+</html>

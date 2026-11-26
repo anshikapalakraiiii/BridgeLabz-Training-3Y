@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Q5 - Image Gallery with Modal</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f3f4f6; padding: 24px; }
+    h1 { text-align: center; }
+    #gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; max-width: 800px; margin: 0 auto; }
+    #gallery img { width: 100%; border-radius: 8px; cursor: pointer; transition: transform .15s; display: block; }
+    #gallery img:hover { transform: scale(1.04); }
+
+    /* Full-screen dark overlay (click on it to close) */
+    #overlay { position: fixed; inset: 0; background: rgba(0,0,0,.75); display: flex; align-items: center; justify-content: center; }
+    #overlay[hidden] { display: none; }
+    /* The modal box (clicks here must NOT close the overlay) */
+    #modal { background: #fff; padding: 14px; border-radius: 10px; max-width: 90vw; max-height: 90vh; text-align: center; }
+    #modal img { max-width: 100%; max-height: 70vh; border-radius: 6px; display: block; }
+    #modal p { margin: 10px 0 0; }
+    #modal small { color: #6b7280; }
+  </style>
+</head>
+<body>
+  <h1>Image Gallery</h1>
+  <div id="gallery"></div>
+
+  <div id="overlay" hidden>
+    <div id="modal">
+      <img id="modal-image" alt="" />
+      <p id="modal-caption"></p>
+      <small>Click outside this box (or press Esc) to close</small>
+    </div>
+  </div>
+  <script src="q5_imageGallery.js"></script>
+</body>
+</html>

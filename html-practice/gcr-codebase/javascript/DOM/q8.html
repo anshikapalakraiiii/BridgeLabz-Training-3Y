@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Q8 - Custom Dropdown</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f3f4f6; display: flex; flex-direction: column; align-items: center; padding: 60px 16px; }
+    .dropdown { position: relative; width: 240px; }
+    #dropdown-button { width: 100%; padding: 10px 14px; text-align: left; background: #fff; border: 1px solid #9ca3af; border-radius: 6px; cursor: pointer; font-size: 1rem; }
+    #dropdown-button::after { content: "▾"; float: right; }
+    #dropdown-menu { position: absolute; top: 100%; left: 0; right: 0; margin: 4px 0 0; padding: 0; list-style: none; background: #fff; border: 1px solid #9ca3af; border-radius: 6px; box-shadow: 0 4px 10px rgba(0,0,0,.12); overflow: hidden; }
+    #dropdown-menu[hidden] { display: none; }
+    #dropdown-menu li { padding: 10px 14px; cursor: pointer; }
+    #dropdown-menu li:hover { background: #dbeafe; }
+  </style>
+</head>
+<body>
+  <h1>Custom Dropdown (no &lt;select&gt;)</h1>
+  <div class="dropdown" id="dropdown">
+    <button id="dropdown-button" aria-haspopup="listbox" aria-expanded="false">Choose a language</button>
+    <ul id="dropdown-menu" role="listbox" hidden>
+      <li role="option">JavaScript</li>
+      <li role="option">Python</li>
+      <li role="option">Java</li>
+      <li role="option">C++</li>
+    </ul>
+  </div>
+  <p id="selection-message"></p>
+  <script src="q8_customDropdown.js"></script>
+</body>
+</html>

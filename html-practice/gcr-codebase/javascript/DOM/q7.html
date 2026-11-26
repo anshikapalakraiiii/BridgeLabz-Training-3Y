@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Q7 - Mouse Path & Coordinates Logger</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f3f4f6; display: flex; flex-direction: column; align-items: center; padding: 30px 16px; }
+    #coordinates { font-size: 1.1rem; margin-bottom: 12px; font-family: monospace; }
+    #box { position: relative; width: 400px; height: 400px; box-sizing: border-box; background: #fff; border: 2px solid #2563eb; overflow: hidden; cursor: crosshair; user-select: none; }
+    #trail { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+    .dot { position: absolute; width: 12px; height: 12px; background: red; border-radius: 50%; transform: translate(-50%, -50%); pointer-events: none; }
+    p.hint { color: #6b7280; }
+    button { margin-top: 10px; padding: 6px 14px; border: none; border-radius: 6px; background: #374151; color: #fff; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>Mouse Path &amp; Coordinates Logger</h1>
+  <div id="coordinates">clientX: -, clientY: -</div>
+  <div id="box">
+    <svg id="trail"><polyline id="trail-line" fill="none" stroke="#93c5fd" stroke-width="2" points="" /></svg>
+  </div>
+  <p class="hint">Move the mouse inside the box. Double-click to drop a red dot.</p>
+  <button id="clear-button">Clear dots &amp; path</button>
+  <script src="q7_mouseLogger.js"></script>
+</body>
+</html>

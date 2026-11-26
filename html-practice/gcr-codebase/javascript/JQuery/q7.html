@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Q7 – Search Courses</title>
+<style>
+:root{--bg:#f6f7fb;--ink:#1d2433;--accent:#2f5bea;--line:#d9deea}
+*{box-sizing:border-box}
+body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--ink);max-width:860px;margin:0 auto;padding:24px;line-height:1.5}
+h1{margin:0 0 4px}
+button{background:var(--accent);color:#fff;border:0;border-radius:6px;padding:8px 14px;cursor:pointer;font:inherit;margin:2px}
+button:hover{filter:brightness(1.12)}
+input,select{padding:8px;border:1px solid var(--line);border-radius:6px;font:inherit}
+.card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px;margin:10px 0}
+ul{list-style:none;padding:0}
+.course{background:#fff;border:1px solid var(--line);border-radius:8px;padding:12px;margin:6px 0}
+.course h3{margin:0}
+#search{width:70%}
+</style>
+</head>
+<body>
+<header><h1>Course Catalogue</h1></header>
+<main>
+  <section><input id="search" type="text" placeholder="Search courses..."><button id="clearBtn">Clear</button>
+    <p id="count"></p></section>
+  <ul id="courses">
+    <li class="course"><h3 class="title">JavaScript Fundamentals</h3><p>Learn core JS concepts.</p></li>
+    <li class="course"><h3 class="title">Advanced jQuery</h3><p>DOM, events and effects.</p></li>
+    <li class="course"><h3 class="title">HTML5 and CSS3</h3><p>Build responsive pages.</p></li>
+    <li class="course"><h3 class="title">Python for Data Science</h3><p>Pandas, NumPy and charts.</p></li>
+    <li class="course"><h3 class="title">Java Programming</h3><p>OOP with Java.</p></li>
+    <li class="course"><h3 class="title">React Basics</h3><p>Components and hooks.</p></li>
+  </ul>
+  <p id="noResult" style="display:none">No courses match your search.</p>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="q7.js"></script>
+</body>
+</html>

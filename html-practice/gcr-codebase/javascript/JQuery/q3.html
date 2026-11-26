@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Q3 – Interactive FAQ</title>
+<style>
+:root{--bg:#f6f7fb;--ink:#1d2433;--accent:#2f5bea;--line:#d9deea}
+*{box-sizing:border-box}
+body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--ink);max-width:860px;margin:0 auto;padding:24px;line-height:1.5}
+h1{margin:0 0 4px}
+button{background:var(--accent);color:#fff;border:0;border-radius:6px;padding:8px 14px;cursor:pointer;font:inherit;margin:2px}
+button:hover{filter:brightness(1.12)}
+input,select{padding:8px;border:1px solid var(--line);border-radius:6px;font:inherit}
+.card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px;margin:10px 0}
+ul{list-style:none;padding:0}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:8px;margin:8px 0;overflow:hidden}
+.question{margin:0;padding:12px 14px;cursor:pointer;transition:background .2s}
+.answer{display:none;padding:0 14px 14px}
+.answer input{width:100%;margin-top:8px}
+</style>
+</head>
+<body>
+<header><h1>Frequently Asked Questions</h1><p>Click to open · double-click a question to collapse all.</p></header>
+<main><ul id="faq">
+  <li class="faq-item"><h3 class="question">How do I reset my password?</h3><div class="answer"><p>Use "Forgot password" on the login page.</p><input type="text" placeholder="Follow-up question..."></div></li>
+  <li class="faq-item"><h3 class="question">What payment methods are accepted?</h3><div class="answer"><p>Cards, UPI and net banking.</p><input type="text" placeholder="Follow-up question..."></div></li>
+  <li class="faq-item"><h3 class="question">How long does delivery take?</h3><div class="answer"><p>Usually 3–5 working days.</p><input type="text" placeholder="Follow-up question..."></div></li>
+  <li class="faq-item"><h3 class="question">Can I return a product?</h3><div class="answer"><p>Yes, within 7 days of delivery.</p><input type="text" placeholder="Follow-up question..."></div></li>
+  <li class="faq-item"><h3 class="question">How do I contact support?</h3><div class="answer"><p>Email support@example.com.</p><input type="text" placeholder="Follow-up question..."></div></li>
+</ul></main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="q3.js"></script>
+</body>
+</html>

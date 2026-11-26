@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Q2 - Live Character Counter</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f3f4f6; display: flex; justify-content: center; padding: 40px 16px; }
+    .app { background: #fff; width: 100%; max-width: 480px; padding: 24px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,.1); }
+    textarea { width: 100%; height: 140px; padding: 10px; box-sizing: border-box; border: 1px solid #ccc; border-radius: 6px; resize: none; font-size: 1rem; }
+    .footer { display: flex; justify-content: space-between; align-items: center; margin-top: 10px; }
+    #counter { font-weight: bold; padding: 4px 10px; border-radius: 6px; background: #dcfce7; color: #166534; }
+    #counter.warning { background: #facc15; color: #422006; }  /* yellow at 20 left */
+    #counter.danger  { background: #dc2626; color: #fff; }     /* red at 0 */
+    #reset-button { padding: 8px 16px; border: none; border-radius: 6px; background: #374151; color: #fff; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <h1>Live Character Counter</h1>
+    <textarea id="message-box" placeholder="Type your message (max 100 characters)"></textarea>
+    <div class="footer">
+      <span id="counter">100 characters remaining</span>
+      <button id="reset-button">Reset</button>
+    </div>
+  </div>
+  <script src="q2_charCounter.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Q1 - Product List Manager</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f3f4f6; display: flex; justify-content: center; padding: 40px 16px; }
+    .app { background: #fff; width: 100%; max-width: 480px; padding: 24px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,.1); }
+    h1 { margin-top: 0; font-size: 1.3rem; }
+    .add-row { display: flex; gap: 8px; margin-bottom: 16px; }
+    .add-row input { flex: 1; padding: 8px; border: 1px solid #ccc; border-radius: 6px; }
+    button { padding: 6px 12px; border: none; border-radius: 6px; cursor: pointer; color: #fff; }
+    #add-button { background: #2563eb; }
+    .edit-button { background: #16a34a; }
+    .delete-button { background: #dc2626; }
+    ul { list-style: none; padding: 0; margin: 0; }
+    .product-item { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 10px; border-bottom: 1px solid #e5e7eb; }
+    .product-item.editing { background: #fef9c3; }
+    .product-name { flex: 1; }
+    .edit-input { flex: 1; padding: 6px; border: 1px solid #2563eb; border-radius: 4px; }
+    .actions { display: flex; gap: 6px; }
+    #empty-message { color: #6b7280; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <h1>Product List Manager</h1>
+    <div class="add-row">
+      <input type="text" id="product-input" placeholder="Enter product name" />
+      <button id="add-button">Add</button>
+    </div>
+    <ul id="product-list"></ul>
+    <p id="empty-message">No products yet. Add one above!</p>
+  </div>
+  <script src="q1_productList.js"></script>
+</body>
+</html>

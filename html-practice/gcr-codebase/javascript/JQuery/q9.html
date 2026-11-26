@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Q9 – Multi-jQuery Widgets</title>
+<style>
+:root{--bg:#f6f7fb;--ink:#1d2433;--accent:#2f5bea;--line:#d9deea}
+*{box-sizing:border-box}
+body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--ink);max-width:860px;margin:0 auto;padding:24px;line-height:1.5}
+button{background:var(--accent);color:#fff;border:0;border-radius:6px;padding:8px 14px;cursor:pointer;font:inherit;margin:2px}
+.widget{background:#fff;border:2px solid var(--line);border-radius:8px;padding:14px;margin:12px 0;cursor:pointer}
+.widget.active{border-color:#d97706;box-shadow:0 0 0 3px #fde7c0}
+.slide{display:none;padding:28px;border-radius:8px;color:#fff;text-align:center;font-size:1.2rem}
+.s1{background:#e0245e}.s2{background:#1a9b53}.s3{background:#d97706}.s4{background:#2f5bea}.s5{background:#7c3aed}
+.tipItem{display:inline-block;background:#e6ecff;border-radius:6px;padding:6px 12px;margin:4px;cursor:help}
+.tooltip{position:absolute;display:none;background:#1d2433;color:#fff;padding:4px 10px;border-radius:6px;font-size:.85rem;z-index:20}
+#overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:10;align-items:center;justify-content:center}
+.modal{background:#fff;border-radius:8px;padding:20px;min-width:280px}
+footer{font-size:.85rem;color:#555}
+</style>
+</head>
+<body>
+<header><h1>Dashboard</h1></header>
+<main>
+  <section class="widget" id="w1"><h2>Carousel (jQuery v1)</h2>
+    <div id="carousel">
+      <div class="slide s1">Slide 1 – Sales up 12%</div><div class="slide s2">Slide 2 – 340 new users</div>
+      <div class="slide s3">Slide 3 – 5 open tickets</div><div class="slide s4">Slide 4 – Uptime 99.9%</div>
+      <div class="slide s5">Slide 5 – Server load normal</div>
+    </div>
+  </section>
+  <section class="widget" id="w2"><h2>Notifications (jQuery v2)</h2>
+    <button id="openModal">Show Notification</button>
+  </section>
+  <section class="widget" id="w3"><h2>Tooltips (jQuery v2)</h2>
+    <span class="tipItem" data-tip="Total revenue this month">Revenue</span>
+    <span class="tipItem" data-tip="Visitors today">Traffic</span>
+    <span class="tipItem" data-tip="Open support tickets">Tickets</span>
+    <span class="tipItem" data-tip="Server health">Uptime</span>
+    <span class="tipItem" data-tip="Customer rating">Reviews</span>
+  </section>
+</main>
+<div id="overlay"><div class="modal"><h3>Notification</h3><p>You have 3 new alerts.</p><button id="closeModal">Close</button></div></div>
+<footer>Running jQuery <span id="ver1"></span> and jQuery <span id="ver2"></span> together.</footer>
+
+<!-- Load version 1, immediately give it its own name and release $ / jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>var jQuery1 = jQuery.noConflict(true);</script>
+<!-- Load version 2 and do the same -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>var jQuery2 = jQuery.noConflict(true);</script>
+<script src="q9.js"></script>
+</body>
+</html>

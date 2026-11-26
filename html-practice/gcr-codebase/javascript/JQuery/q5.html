@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Q5 – Team Members Directory</title>
+<style>
+:root{--bg:#f6f7fb;--ink:#1d2433;--accent:#2f5bea;--line:#d9deea}
+*{box-sizing:border-box}
+body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--ink);max-width:860px;margin:0 auto;padding:24px;line-height:1.5}
+h1{margin:0 0 4px}
+button{background:var(--accent);color:#fff;border:0;border-radius:6px;padding:8px 14px;cursor:pointer;font:inherit;margin:2px}
+button:hover{filter:brightness(1.12)}
+input,select{padding:8px;border:1px solid var(--line);border-radius:6px;font:inherit}
+.card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px;margin:10px 0}
+ul{list-style:none;padding:0}
+.dept{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px;margin:12px 0}
+.dept-title{cursor:pointer;margin:0 0 8px;display:inline-block}
+.employee{padding:8px 10px;margin:4px 0;border:1px solid var(--line);border-radius:6px;background:#fafbff}
+.name{cursor:pointer;font-weight:600}
+.manager .name::after{content:' (Manager)';font-weight:400;color:#777}
+.contact{display:none;color:#555;font-size:.9rem;margin-left:8px}
+.toggle-team{float:right}
+</style>
+</head>
+<body>
+<header><h1>Team Directory</h1>
+  <button id="randomBtn">Pick Random Employee</button></header>
+<main id="directory">
+  <section class="dept" data-dept="eng">
+    <button class="toggle-team">Collapse / Expand</button>
+    <h2 class="dept-title">Engineering</h2>
+    <ul class="team">
+      <li class="employee manager" data-id="m1"><span class="name">Asha Rao</span><span class="contact">asha@corp.com · x101</span></li>
+      <li class="employee" data-manager="m1"><span class="name">Vikram Shah</span><span class="contact">vikram@corp.com · x102</span></li>
+      <li class="employee" data-manager="m1"><span class="name">Neha Gupta</span><span class="contact">neha@corp.com · x103</span></li>
+      <li class="employee" data-manager="m1"><span class="name">Rohit Jain</span><span class="contact">rohit@corp.com · x104</span></li>
+      <li class="employee" data-manager="m1"><span class="name">Sara Khan</span><span class="contact">sara@corp.com · x105</span></li>
+    </ul>
+  </section>
+  <section class="dept" data-dept="mkt">
+    <button class="toggle-team">Collapse / Expand</button>
+    <h2 class="dept-title">Marketing</h2>
+    <ul class="team">
+      <li class="employee manager" data-id="m2"><span class="name">Rahul Mehta</span><span class="contact">rahul@corp.com · x201</span></li>
+      <li class="employee" data-manager="m2"><span class="name">Pooja Nair</span><span class="contact">pooja@corp.com · x202</span></li>
+      <li class="employee" data-manager="m2"><span class="name">Dev Patel</span><span class="contact">dev@corp.com · x203</span></li>
+      <li class="employee" data-manager="m2"><span class="name">Isha Verma</span><span class="contact">isha@corp.com · x204</span></li>
+      <li class="employee" data-manager="m2"><span class="name">Kabir Singh</span><span class="contact">kabir@corp.com · x205</span></li>
+    </ul>
+  </section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="q5.js"></script>
+</body>
+</html>
