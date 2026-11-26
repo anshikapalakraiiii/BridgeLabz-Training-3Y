@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Q8 – Dynamic Blog Posts</title>
+<style>
+:root{--bg:#f6f7fb;--ink:#1d2433;--accent:#2f5bea;--line:#d9deea}
+*{box-sizing:border-box}
+body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--ink);max-width:860px;margin:0 auto;padding:24px;line-height:1.5}
+h1{margin:0 0 4px}
+button{background:var(--accent);color:#fff;border:0;border-radius:6px;padding:8px 14px;cursor:pointer;font:inherit;margin:2px}
+button:hover{filter:brightness(1.12)}
+input,select{padding:8px;border:1px solid var(--line);border-radius:6px;font:inherit}
+.card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px;margin:10px 0}
+ul{list-style:none;padding:0}
+.post{background:#fff;border:1px solid var(--line);border-radius:8px;padding:12px;margin:8px 0}
+.post h3{margin:4px 0}
+.post.featured{border:2px solid #d97706}
+.tag{display:inline-block;background:#e6ecff;color:#2f5bea;border-radius:12px;padding:1px 10px;margin:2px;font-size:.85rem}
+.admin{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+</style>
+</head>
+<body>
+<header><h1>Blog Admin Panel</h1></header>
+<main>
+  <section class="card admin">
+    <button id="addPost">Add New Post</button>
+    <button id="prependPost">Prepend Featured Post</button>
+    <button id="removeLast">Remove Last Post</button>
+  </section>
+  <section class="card admin">
+    <input id="tagText" value="news" size="10" aria-label="Tag text">
+    <span>(use the tag buttons on each post)</span>
+  </section>
+  <section class="card admin">
+    <input id="keyword" placeholder="Keyword to highlight"><button id="highlightBtn">Highlight</button><button id="resetBtn">Reset</button>
+  </section>
+  <section id="posts">
+    <article class="post"><h3>Getting Started with jQuery</h3><p>Selectors and events explained.</p><button class="tag-before">Tag before title</button><button class="tag-after">Tag after title</button></article>
+    <article class="post"><h3>CSS Grid Tips</h3><p>Layouts made simple.</p><button class="tag-before">Tag before title</button><button class="tag-after">Tag after title</button></article>
+    <article class="post"><h3>JavaScript Closures</h3><p>Understand scope and closures.</p><button class="tag-before">Tag before title</button><button class="tag-after">Tag after title</button></article>
+    <article class="post"><h3>Responsive Design</h3><p>Mobile-first thinking.</p><button class="tag-before">Tag before title</button><button class="tag-after">Tag after title</button></article>
+    <article class="post"><h3>Debugging jQuery Code</h3><p>Browser dev tools tricks.</p><button class="tag-before">Tag before title</button><button class="tag-after">Tag after title</button></article>
+  </section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="q8.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Q1 – Welcome Page Greeting</title>
+<style>
+:root{--bg:#f6f7fb;--ink:#1d2433;--accent:#2f5bea;--line:#d9deea}
+*{box-sizing:border-box}
+body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--ink);max-width:860px;margin:0 auto;padding:24px;line-height:1.5}
+h1{margin:0 0 4px}
+button{background:var(--accent);color:#fff;border:0;border-radius:6px;padding:8px 14px;cursor:pointer;font:inherit;margin:2px}
+button:hover{filter:brightness(1.12)}
+input,select{padding:8px;border:1px solid var(--line);border-radius:6px;font:inherit}
+.card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px;margin:10px 0}
+ul{list-style:none;padding:0}
+#greeting{cursor:pointer;font-size:2rem}.btns{margin:12px 0}
+</style>
+</head>
+<body>
+<header><h1 id="greeting"></h1></header>
+<main>
+  <section class="card"><p id="welcomeMsg">Welcome to our website! We're glad you're here.</p></section>
+  <div class="btns">
+    <button id="changeBtn">Change Greeting</button>
+    <button id="toggleBtn">Toggle Welcome Message</button>
+  </div>
+  <section class="card"><h2>Today's Highlights</h2>
+    <ul id="highlights"><li>New arrivals</li><li>Weekly deals</li><li>Top blogs</li><li>Community events</li><li>Help centre</li></ul>
+  </section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="q1.js"></script>
+</body>
+</html>

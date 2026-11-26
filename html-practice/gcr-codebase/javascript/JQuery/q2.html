@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Q2 – Product Highlight</title>
+<style>
+:root{--bg:#f6f7fb;--ink:#1d2433;--accent:#2f5bea;--line:#d9deea}
+*{box-sizing:border-box}
+body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--ink);max-width:860px;margin:0 auto;padding:24px;line-height:1.5}
+h1{margin:0 0 4px}
+button{background:var(--accent);color:#fff;border:0;border-radius:6px;padding:8px 14px;cursor:pointer;font:inherit;margin:2px}
+button:hover{filter:brightness(1.12)}
+input,select{padding:8px;border:1px solid var(--line);border-radius:6px;font:inherit}
+.card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px;margin:10px 0}
+ul{list-style:none;padding:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.product{position:relative;cursor:pointer;background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px}
+.details{display:none;font-size:.9rem;color:#555;margin-top:8px}
+.fav{position:absolute;top:8px;right:8px;background:#fff;color:#aaa;border:1px solid var(--line);font-size:1.1rem;padding:2px 8px}
+.fav.selected{color:#fff;background:#e0245e}
+.product.highlight{background:#fff3b0}
+.product.discounted{border:2px dashed #1a9b53}
+.product.discounted h3::after{content:' – SALE';color:#1a9b53;font-size:.8rem}
+</style>
+</head>
+<body>
+<header><h1>Featured Products</h1><p>Click to highlight, hover for details, ♥ to favourite.</p></header>
+<main class="grid">
+  <article class="product" data-stock="5" data-discount="20%"><button class="fav" title="Favorite">♥</button><h3>Wireless Headphones</h3><p>₹2,999</p><div class="details">Bluetooth 5.3, 30-hour battery.</div></article>
+  <article class="product" data-stock="0"><button class="fav" title="Favorite">♥</button><h3>Smart Watch</h3><p>₹4,499</p><div class="details">Heart-rate tracking, AMOLED display.</div></article>
+  <article class="product" data-stock="12" data-discount="10%"><button class="fav" title="Favorite">♥</button><h3>Backpack</h3><p>₹1,299</p><div class="details">Water-resistant, 25L capacity.</div></article>
+  <article class="product" data-stock="3"><button class="fav" title="Favorite">♥</button><h3>Desk Lamp</h3><p>₹899</p><div class="details">LED, 3 brightness modes.</div></article>
+  <article class="product" data-stock="0" data-discount="30%"><button class="fav" title="Favorite">♥</button><h3>Mechanical Keyboard</h3><p>₹3,799</p><div class="details">Blue switches, RGB backlight.</div></article>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="q2.js"></script>
+</body>
+</html>

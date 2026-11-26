@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Q6 – Event Subscription Panel</title>
+<style>
+:root{--bg:#f6f7fb;--ink:#1d2433;--accent:#2f5bea;--line:#d9deea}
+*{box-sizing:border-box}
+body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--ink);max-width:860px;margin:0 auto;padding:24px;line-height:1.5}
+h1{margin:0 0 4px}
+button{background:var(--accent);color:#fff;border:0;border-radius:6px;padding:8px 14px;cursor:pointer;font:inherit;margin:2px}
+button:hover{filter:brightness(1.12)}
+input,select{padding:8px;border:1px solid var(--line);border-radius:6px;font:inherit}
+.card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px;margin:10px 0}
+ul{list-style:none;padding:0}
+.topic{display:flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px;margin:6px 0}
+.topic .label{flex:1}
+.topic.subscribed{border-color:#1a9b53;background:#effaf3}
+.topic.removed{opacity:.5}
+.status{font-weight:600}
+.msg{background:#d9f5e3;color:#14532d;padding:8px 12px;border-radius:6px;margin:6px 0}
+</style>
+</head>
+<body>
+<header><h1>Event Subscriptions</h1>
+  <p class="status">Notifications: <span id="notifState">Off</span></p></header>
+<main>
+  <section id="messages"></section>
+  <ul id="topics">
+    <li class="topic"><span class="label">Tech Meetups</span><button class="sub">Subscribe</button><button class="unsub">Unsubscribe</button><button class="remove">Remove</button></li>
+    <li class="topic"><span class="label">Design Workshops</span><button class="sub">Subscribe</button><button class="unsub">Unsubscribe</button><button class="remove">Remove</button></li>
+    <li class="topic"><span class="label">Career Fairs</span><button class="sub">Subscribe</button><button class="unsub">Unsubscribe</button><button class="remove">Remove</button></li>
+    <li class="topic"><span class="label">Hackathons</span><button class="sub">Subscribe</button><button class="unsub">Unsubscribe</button><button class="remove">Remove</button></li>
+    <li class="topic"><span class="label">Webinars</span><button class="sub">Subscribe</button><button class="unsub">Unsubscribe</button><button class="remove">Remove</button></li>
+  </ul>
+  <section class="card"><input id="newTopic" placeholder="New topic name"><button id="addTopic">Add Topic</button></section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="q6.js"></script>
+</body>
+</html>

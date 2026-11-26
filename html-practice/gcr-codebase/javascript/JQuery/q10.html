@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Q10 – Registration Form Validation</title>
+<style>
+:root{--bg:#f6f7fb;--ink:#1d2433;--accent:#2f5bea;--line:#d9deea}
+*{box-sizing:border-box}
+body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--ink);max-width:860px;margin:0 auto;padding:24px;line-height:1.5}
+h1{margin:0 0 4px}
+button{background:var(--accent);color:#fff;border:0;border-radius:6px;padding:8px 14px;cursor:pointer;font:inherit;margin:2px}
+button:hover{filter:brightness(1.12)}
+input,select{padding:8px;border:1px solid var(--line);border-radius:6px;font:inherit}
+.card{background:#fff;border:1px solid var(--line);border-radius:8px;padding:14px;margin:10px 0}
+ul{list-style:none;padding:0}
+label{display:block;margin-top:10px;font-weight:600}
+form input{width:100%}
+.error{color:#c0182d;font-size:.85rem;display:block;min-height:1.2em}
+#success{display:none;background:#d9f5e3;color:#14532d;padding:10px 14px;border-radius:6px;margin-top:12px}
+</style>
+</head>
+<body>
+<header><h1>Create an Account</h1></header>
+<main>
+  <form id="regForm" class="card" novalidate>
+    <label for="name">Name</label>
+    <input type="text" id="name"><span class="error"></span>
+    <label for="email">Email</label>
+    <input type="email" id="email"><span class="error"></span>
+    <label for="password">Password (min 8 characters)</label>
+    <input type="password" id="password"><span class="error"></span>
+    <button type="submit">Register</button>
+  </form>
+  <p id="success"></p>
+  <section class="card"><h2>Already registered emails</h2>
+    <ul id="taken"><li>amit@example.com</li><li>priya@example.com</li><li>rahul@example.com</li><li>sneha@example.com</li><li>karan@example.com</li></ul>
+  </section>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="q10.js"></script>
+</body>
+</html>
